@@ -18,6 +18,7 @@ SERVER:=localhost
 
 help:
 	@echo ' afm'
+	@echo ' kart'
 	@echo ' sonoma-t01.jpg'
 	@echo ' sonoma-t11.jpg'
 	@echo ' sonoma-kart.jpg'
@@ -29,9 +30,11 @@ help:
 	@echo ' sonoma.jpg'
 	@echo ' clean'
 
-.PHONY: afm clean clean-xy clean-l clean-i
+.PHONY: afm kart clean clean-xy clean-l clean-i
 
 afm: buttonwillow.jpg sonoma.jpg thunderhill.jpg
+
+kart: buttonwillow-kart.jpg sonoma-kart.jpg atwater-kart.jpg stockton-kart.jpg
 
 buttonwillow.jpg:
 	$(CURDIR)/satellite-stitcher.sh $(SERVER) 176070 413566 36 39 $@
