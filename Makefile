@@ -25,6 +25,7 @@ help:
 	@echo ' stockton-kart.jpg'
 	@echo ' buttonwillow.jpg'
 	@echo ' thunderhill.jpg'
+	@echo ' sonoma.jpg'
 	@echo ' clean'
 
 .PHONY: clean clean-xy clean-l clean-i
@@ -53,6 +54,9 @@ buttonwillow.jpg:
 thunderhill.jpg:
 	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167956 398692 32 37 $@
 
+sonoma.jpg:
+	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167583 403846 39 35 $@
+
 clean: clean-xy clean-l clean-i
 
 clean-xy:
@@ -69,3 +73,4 @@ clean-i:
 	$(RM) stockton-kart.jpg
 	$(RM) buttonwillow.jpg
 	$(RM) thunderhill.jpg
+	$(RM) sonoma.jpg
