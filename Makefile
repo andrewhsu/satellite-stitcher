@@ -17,6 +17,7 @@
 SERVER:=localhost
 
 help:
+	@echo ' afm'
 	@echo ' sonoma-t01.jpg'
 	@echo ' sonoma-t11.jpg'
 	@echo ' sonoma-kart.jpg'
@@ -28,7 +29,9 @@ help:
 	@echo ' sonoma.jpg'
 	@echo ' clean'
 
-.PHONY: clean clean-xy clean-l clean-i
+.PHONY: afm clean clean-xy clean-l clean-i
+
+afm: buttonwillow.jpg sonoma.jpg thunderhill.jpg
 
 sonoma-t01.jpg:
 	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167608 403865 3 3 $@
