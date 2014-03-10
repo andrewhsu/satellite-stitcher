@@ -23,6 +23,7 @@ help:
 	@echo ' buttonwillow-kart.jpg'
 	@echo ' atwater-kart.jpg'
 	@echo ' stockton-kart.jpg'
+	@echo ' buttonwillow.jpg'
 	@echo ' thunderhill.jpg'
 	@echo ' clean'
 
@@ -46,6 +47,9 @@ atwater-kart.jpg:
 stockton-kart.jpg:
 	$(CURDIR)/satellite-stitcher.sh $(SERVER) 171063 404680 10 5 $@
 
+buttonwillow.jpg:
+	$(CURDIR)/satellite-stitcher.sh $(SERVER) 176070 413566 36 39 $@
+
 thunderhill.jpg:
 	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167956 398692 32 37 $@
 
@@ -63,4 +67,5 @@ clean-i:
 	$(RM) buttonwillow-kart.jpg
 	$(RM) atwater-kart.jpg
 	$(RM) stockton-kart.jpg
+	$(RM) buttonwillow.jpg
 	$(RM) thunderhill.jpg
