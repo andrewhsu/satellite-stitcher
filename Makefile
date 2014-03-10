@@ -33,6 +33,15 @@ help:
 
 afm: buttonwillow.jpg sonoma.jpg thunderhill.jpg
 
+buttonwillow.jpg:
+	$(CURDIR)/satellite-stitcher.sh $(SERVER) 176070 413566 36 39 $@
+
+sonoma.jpg:
+	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167583 403846 39 35 $@
+
+thunderhill.jpg:
+	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167956 398692 32 37 $@
+
 sonoma-t01.jpg:
 	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167608 403865 3 3 $@
 
@@ -50,15 +59,6 @@ atwater-kart.jpg:
 
 stockton-kart.jpg:
 	$(CURDIR)/satellite-stitcher.sh $(SERVER) 171063 404680 10 5 $@
-
-buttonwillow.jpg:
-	$(CURDIR)/satellite-stitcher.sh $(SERVER) 176070 413566 36 39 $@
-
-thunderhill.jpg:
-	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167956 398692 32 37 $@
-
-sonoma.jpg:
-	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167583 403846 39 35 $@
 
 clean: clean-xy clean-l clean-i
 
