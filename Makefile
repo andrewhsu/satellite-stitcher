@@ -19,15 +19,15 @@ SERVER:=localhost
 help:
 	@echo ' afm'
 	@echo ' kart'
+	@echo ' buttonwillow.jpg'
+	@echo ' sonoma.jpg'
+	@echo ' thunderhill.jpg'
 	@echo ' sonoma-t01.jpg'
 	@echo ' sonoma-t11.jpg'
-	@echo ' sonoma-kart.jpg'
 	@echo ' buttonwillow-kart.jpg'
+	@echo ' sonoma-kart.jpg'
 	@echo ' atwater-kart.jpg'
 	@echo ' stockton-kart.jpg'
-	@echo ' buttonwillow.jpg'
-	@echo ' thunderhill.jpg'
-	@echo ' sonoma.jpg'
 	@echo ' clean'
 
 .PHONY: afm kart clean clean-xy clean-l clean-i
