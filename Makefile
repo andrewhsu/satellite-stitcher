@@ -22,6 +22,7 @@ help:
 	@echo ' buttonwillow.jpg'
 	@echo ' sonoma.jpg'
 	@echo ' thunderhill.jpg'
+	@echo ' brandshatch.jpg'
 	@echo ' sonoma-t01.jpg'
 	@echo ' sonoma-t11.jpg'
 	@echo ' buttonwillow-kart.jpg'
@@ -44,6 +45,9 @@ sonoma.jpg:
 
 thunderhill.jpg:
 	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167956 398692 32 37 $@
+
+brandshatch.jpg:
+	$(CURDIR)/satellite-stitcher.sh $(SERVER) 525031 349359 42 44 $@
 
 sonoma-t01.jpg:
 	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167608 403865 3 3 $@
@@ -79,4 +83,5 @@ clean-i:
 	$(RM) stockton-kart.jpg
 	$(RM) buttonwillow.jpg
 	$(RM) thunderhill.jpg
+	$(RM) brandshatch.jpg
 	$(RM) sonoma.jpg
