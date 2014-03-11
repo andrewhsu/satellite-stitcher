@@ -21,7 +21,7 @@ usage() {
 }
 
 convert=convert
-curl='curl -f -#'
+curl='curl -f -s'
 
 while getopts 'n' opt; do
   case $opt in
@@ -43,20 +43,30 @@ xstart=$2
 ystart=$3
 xdelta=$4
 ydelta=$5
+xend=$(( $xstart + $xdelta ))
+yend=$(( $ystart + $ydelta ))
+blocks=$(( $xdelta * $ydelta ))
 img=$6
 
-blocks=()
-strips=()
-for (( x=$xstart; x<$xstart+$xdelta; x++ )); do
-  for (( y=$ystart; y<$ystart+$ydelta; y++ )); do
-    o="x${x}y${y}.jpg"
+mkdir -p blocks
+echo -n "retrieving $blocks blocks "
+for (( x=$xstart; x<$xend; x++ )); do
+  for (( y=$ystart; y<$yend; y++ )); do
+    o="blocks/x${x}y${y}.jpg"
     [ ! -f $o ] && ${curl} -o $o "http://${server}/kh/v=145&x=${x}&y=${y}&z=20"
-    blocks+=($o)
+    echo -n .
   done
-  l="l${x}.jpg"
-  ${convert} -monitor ${blocks[@]} -append $l
-  blocks=()
-  strips+=($l)
 done
+echo
 
-${convert} -monitor ${strips[@]} +append $img
+mkdir -p strips
+echo -n "stitching $xdelta strips "
+for (( x=$xstart; x<$xend; x++ )); do
+  ${convert} `seq -s' ' -f"blocks/x${x}y%g.jpg" $ystart $(($yend - 1))` -append "strips/l${x}.jpg"
+  echo -n '|'
+done
+echo
+
+echo -n 'stitching final image: '
+${convert} `seq -s' ' -f'strips/l%g.jpg' $xstart $(($xend - 1))` +append $img
+echo $img

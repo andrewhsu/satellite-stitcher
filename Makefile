@@ -31,7 +31,7 @@ help:
 	@echo ' stockton-kart.jpg'
 	@echo ' clean'
 
-.PHONY: afm kart clean clean-xy clean-l clean-i
+.PHONY: afm kart clean clean-blocks clean-strips clean-images
 
 afm: buttonwillow.jpg sonoma.jpg thunderhill.jpg
 
@@ -67,15 +67,15 @@ atwater-kart.jpg:
 stockton-kart.jpg:
 	$(CURDIR)/satellite-stitcher.sh $(SERVER) 171063 404680 10 5 $@
 
-clean: clean-xy clean-l clean-i
+clean: clean-blocks clean-strips clean-images
 
-clean-xy:
-	$(RM) x??????y??????.jpg
+clean-blocks:
+	$(RM) -r blocks
 
-clean-l:
-	$(RM) l??????.jpg
+clean-strips:
+	$(RM) -r strips
 
-clean-i:
+clean-images:
 	$(RM) sonoma-t??.jpg
 	$(RM) sonoma-kart.jpg
 	$(RM) buttonwillow-kart.jpg
