@@ -23,7 +23,7 @@ help:
 	@echo ' track-sonoma.jpg'
 	@echo ' track-thunderhill.jpg'
 	@echo ' track-brandshatch.jpg'
-	@echo ' track-sonoma-t{01-11}.jpg'
+	@echo ' track-sonoma-t{01..11}.jpg'
 	@echo ' track-buttonwillow-kart.jpg'
 	@echo ' track-sonoma-kart.jpg'
 	@echo ' track-atwater-kart.jpg'
