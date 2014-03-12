@@ -19,52 +19,52 @@ SERVER:=localhost
 help:
 	@echo ' afm'
 	@echo ' kart'
-	@echo ' buttonwillow.jpg'
-	@echo ' sonoma.jpg'
-	@echo ' thunderhill.jpg'
-	@echo ' brandshatch.jpg'
-	@echo ' sonoma-t01.jpg'
-	@echo ' sonoma-t11.jpg'
-	@echo ' buttonwillow-kart.jpg'
-	@echo ' sonoma-kart.jpg'
-	@echo ' atwater-kart.jpg'
-	@echo ' stockton-kart.jpg'
+	@echo ' track-buttonwillow.jpg'
+	@echo ' track-sonoma.jpg'
+	@echo ' track-thunderhill.jpg'
+	@echo ' track-brandshatch.jpg'
+	@echo ' track-sonoma-t01.jpg'
+	@echo ' track-sonoma-t11.jpg'
+	@echo ' track-buttonwillow-kart.jpg'
+	@echo ' track-sonoma-kart.jpg'
+	@echo ' track-atwater-kart.jpg'
+	@echo ' track-stockton-kart.jpg'
 	@echo ' clean'
 
 .PHONY: afm kart clean clean-blocks clean-strips clean-images
 
-afm: buttonwillow.jpg sonoma.jpg thunderhill.jpg
+afm: track-buttonwillow.jpg track-sonoma.jpg track-thunderhill.jpg
 
-kart: buttonwillow-kart.jpg sonoma-kart.jpg atwater-kart.jpg stockton-kart.jpg
+kart: track-buttonwillow-kart.jpg track-sonoma-kart.jpg track-atwater-kart.jpg track-stockton-kart.jpg
 
-buttonwillow.jpg:
+track-buttonwillow.jpg:
 	$(CURDIR)/satellite-stitcher.sh $(SERVER) 176070 413566 36 39 $@
 
-sonoma.jpg:
+track-sonoma.jpg:
 	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167583 403846 39 35 $@
 
-thunderhill.jpg:
+track-thunderhill.jpg:
 	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167956 398692 32 37 $@
 
-brandshatch.jpg:
+track-brandshatch.jpg:
 	$(CURDIR)/satellite-stitcher.sh $(SERVER) 525031 349359 42 44 $@
 
-sonoma-t01.jpg:
+track-sonoma-t01.jpg:
 	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167608 403865 3 3 $@
 
-sonoma-t11.jpg:
+track-sonoma-t11.jpg:
 	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167617 403871 3 3 $@
 
-sonoma-kart.jpg:
+track-sonoma-kart.jpg:
 	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167615 403885 15 14 $@
 
-buttonwillow-kart.jpg:
+track-buttonwillow-kart.jpg:
 	$(CURDIR)/satellite-stitcher.sh $(SERVER) 176087 413582 12 6 $@
 
-atwater-kart.jpg:
+track-atwater-kart.jpg:
 	$(CURDIR)/satellite-stitcher.sh $(SERVER) 172992 406914 8 10 $@
 
-stockton-kart.jpg:
+track-stockton-kart.jpg:
 	$(CURDIR)/satellite-stitcher.sh $(SERVER) 171063 404680 10 5 $@
 
 clean: clean-blocks clean-strips clean-images
@@ -76,12 +76,4 @@ clean-strips:
 	$(RM) -r strips
 
 clean-images:
-	$(RM) sonoma-t??.jpg
-	$(RM) sonoma-kart.jpg
-	$(RM) buttonwillow-kart.jpg
-	$(RM) atwater-kart.jpg
-	$(RM) stockton-kart.jpg
-	$(RM) buttonwillow.jpg
-	$(RM) thunderhill.jpg
-	$(RM) brandshatch.jpg
-	$(RM) sonoma.jpg
+	$(RM) track-*.jpg
