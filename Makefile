@@ -52,6 +52,9 @@ track-brandshatch.jpg:
 track-sonoma-t01.jpg:
 	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167606 403865 5 2 $@
 
+track-sonoma-t02.jpg:
+	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167598 403866 6 5 $@
+
 track-sonoma-t11.jpg:
 	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167617 403871 3 3 $@
 
