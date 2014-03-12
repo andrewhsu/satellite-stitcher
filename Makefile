@@ -18,6 +18,7 @@ SERVER:=localhost
 
 help:
 	@echo ' afm'
+	@echo ' sonoma'
 	@echo ' kart'
 	@echo ' track-buttonwillow.jpg'
 	@echo ' track-sonoma.jpg'
@@ -30,9 +31,11 @@ help:
 	@echo ' track-stockton-kart.jpg'
 	@echo ' clean'
 
-.PHONY: afm kart clean clean-blocks clean-strips clean-images
+.PHONY: afm sonoma kart clean clean-blocks clean-strips clean-images
 
 afm: track-buttonwillow.jpg track-sonoma.jpg track-thunderhill.jpg
+
+sonoma: track-sonoma.jpg $(shell seq -f'track-sonoma-t%02g.jpg' -s' ' 1 11)
 
 kart: track-buttonwillow-kart.jpg track-sonoma-kart.jpg track-atwater-kart.jpg track-stockton-kart.jpg
 
