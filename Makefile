@@ -23,8 +23,7 @@ help:
 	@echo ' track-sonoma.jpg'
 	@echo ' track-thunderhill.jpg'
 	@echo ' track-brandshatch.jpg'
-	@echo ' track-sonoma-t01.jpg'
-	@echo ' track-sonoma-t11.jpg'
+	@echo ' track-sonoma-t{01-11}.jpg'
 	@echo ' track-buttonwillow-kart.jpg'
 	@echo ' track-sonoma-kart.jpg'
 	@echo ' track-atwater-kart.jpg'
@@ -54,6 +53,9 @@ track-sonoma-t01.jpg:
 
 track-sonoma-t02.jpg:
 	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167598 403866 6 5 $@
+
+track-sonoma-t03.jpg:
+	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167589 403862 8 5 $@
 
 track-sonoma-t11.jpg:
 	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167617 403871 3 3 $@
