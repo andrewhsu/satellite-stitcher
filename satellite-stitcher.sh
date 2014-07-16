@@ -53,7 +53,7 @@ echo -n "retrieving $blocks blocks "
 for (( x=$xstart; x<$xend; x++ )); do
   for (( y=$ystart; y<$yend; y++ )); do
     o="blocks/x${x}y${y}.jpg"
-    [ ! -f $o ] && ${curl} -o $o "http://${server}/kh/v=145&x=${x}&y=${y}&z=20"
+    [ ! -f $o ] && ${curl} -o $o "http://${server}/kh/v=153&x=${x}&y=${y}&z=20"
     echo -n .
   done
 done
