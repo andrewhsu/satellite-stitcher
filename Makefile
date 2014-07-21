@@ -19,6 +19,7 @@ SERVER:=localhost
 help:
 	@echo ' afm'
 	@echo ' sonoma'
+	@echo ' thunderhill'
 	@echo ' kart'
 	@echo ' track-buttonwillow.jpg'
 	@echo ' track-sonoma.jpg'
@@ -37,6 +38,8 @@ afm: track-buttonwillow.jpg track-sonoma.jpg track-thunderhill.jpg
 
 sonoma: track-sonoma.jpg $(shell seq -f'track-sonoma-t%02g.jpg' -s' ' 1 11)
 
+thunderhill: track-thunderhill.jpg $(shell seq -f'track-thunderhill-t%02g.jpg' -s' ' 1 15) track-thunderhill-t05a.jpg
+
 kart: track-buttonwillow-kart.jpg track-sonoma-kart.jpg track-atwater-kart.jpg track-stockton-kart.jpg
 
 track-buttonwillow.jpg:
@@ -47,6 +50,54 @@ track-sonoma.jpg:
 
 track-thunderhill.jpg:
 	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167956 398692 32 37 $@
+
+track-thunderhill-t01.jpg:
+	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167971 398720 7 8 $@
+
+track-thunderhill-t02.jpg:
+	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167976 398721 11 8 $@
+
+track-thunderhill-t03.jpg:
+	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167976 398713 11 9 $@
+
+track-thunderhill-t04.jpg:
+	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167978 398709 4 7 $@
+
+track-thunderhill-t05.jpg:
+	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167975 398705 5 7 $@
+
+track-thunderhill-t05a.jpg:
+	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167975 398702 5 7 $@
+
+track-thunderhill-t06.jpg:
+	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167976 398695 5 9 $@
+
+track-thunderhill-t07.jpg:
+	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167970 398692 9 5 $@
+
+track-thunderhill-t08.jpg:
+	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167960 398692 13 5 $@
+
+track-thunderhill-t09.jpg:
+	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167956 398699 5 7 $@
+
+track-thunderhill-t10.jpg:
+	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167959 398715 7 6 $@
+
+track-thunderhill-t11.jpg:
+	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167961 398716 6 5 $@
+
+track-thunderhill-t12.jpg:
+	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167965 398715 3 6 $@
+
+track-thunderhill-t13.jpg:
+	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167965 398712 4 7 $@
+
+track-thunderhill-t14.jpg:
+	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167967 398696 6 8 $@
+
+track-thunderhill-t15.jpg:
+	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167970 398697 3 6 $@
 
 track-brandshatch.jpg:
 	$(CURDIR)/satellite-stitcher.sh $(SERVER) 525031 349359 42 44 $@
