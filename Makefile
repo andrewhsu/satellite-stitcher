@@ -14,6 +14,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+SS_OPT:=-b
 SERVER:=localhost
 
 help:
@@ -43,109 +44,109 @@ thunderhill: track-thunderhill.jpg $(shell seq -f'track-thunderhill-t%02g.jpg' -
 kart: track-buttonwillow-kart.jpg track-sonoma-kart.jpg track-atwater-kart.jpg track-stockton-kart.jpg
 
 track-buttonwillow.jpg:
-	$(CURDIR)/satellite-stitcher.sh $(SERVER) 176070 413566 36 39 $@
+	$(CURDIR)/satellite-stitcher.sh $(SS_OPT) $(SERVER) 176070 413566 36 39 $@
 
 track-sonoma.jpg:
-	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167583 403846 39 35 $@
+	$(CURDIR)/satellite-stitcher.sh $(SS_OPT) $(SERVER) 167583 403846 39 35 $@
 
 track-thunderhill.jpg:
-	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167956 398692 32 37 $@
+	$(CURDIR)/satellite-stitcher.sh $(SS_OPT) $(SERVER) 167956 398692 32 37 $@
 
 track-thunderhill-t01.jpg:
-	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167971 398720 7 8 $@
+	$(CURDIR)/satellite-stitcher.sh $(SS_OPT) $(SERVER) 167971 398720 7 8 $@
 
 track-thunderhill-t02.jpg:
-	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167976 398721 11 8 $@
+	$(CURDIR)/satellite-stitcher.sh $(SS_OPT) $(SERVER) 167976 398721 11 8 $@
 
 track-thunderhill-t03.jpg:
-	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167976 398713 11 9 $@
+	$(CURDIR)/satellite-stitcher.sh $(SS_OPT) $(SERVER) 167976 398713 11 9 $@
 
 track-thunderhill-t04.jpg:
-	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167978 398709 4 7 $@
+	$(CURDIR)/satellite-stitcher.sh $(SS_OPT) $(SERVER) 167978 398709 4 7 $@
 
 track-thunderhill-t05.jpg:
-	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167975 398705 5 7 $@
+	$(CURDIR)/satellite-stitcher.sh $(SS_OPT) $(SERVER) 167975 398705 5 7 $@
 
 track-thunderhill-t05a.jpg:
-	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167975 398702 5 7 $@
+	$(CURDIR)/satellite-stitcher.sh $(SS_OPT) $(SERVER) 167975 398702 5 7 $@
 
 track-thunderhill-t06.jpg:
-	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167976 398695 5 9 $@
+	$(CURDIR)/satellite-stitcher.sh $(SS_OPT) $(SERVER) 167976 398695 5 9 $@
 
 track-thunderhill-t07.jpg:
-	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167970 398692 9 5 $@
+	$(CURDIR)/satellite-stitcher.sh $(SS_OPT) $(SERVER) 167970 398692 9 5 $@
 
 track-thunderhill-t08.jpg:
-	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167960 398692 13 5 $@
+	$(CURDIR)/satellite-stitcher.sh $(SS_OPT) $(SERVER) 167960 398692 13 5 $@
 
 track-thunderhill-t09.jpg:
-	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167956 398699 5 7 $@
+	$(CURDIR)/satellite-stitcher.sh $(SS_OPT) $(SERVER) 167956 398699 5 7 $@
 
 track-thunderhill-t10.jpg:
-	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167959 398715 7 6 $@
+	$(CURDIR)/satellite-stitcher.sh $(SS_OPT) $(SERVER) 167959 398715 7 6 $@
 
 track-thunderhill-t11.jpg:
-	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167961 398716 6 5 $@
+	$(CURDIR)/satellite-stitcher.sh $(SS_OPT) $(SERVER) 167961 398716 6 5 $@
 
 track-thunderhill-t12.jpg:
-	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167965 398715 3 6 $@
+	$(CURDIR)/satellite-stitcher.sh $(SS_OPT) $(SERVER) 167965 398715 3 6 $@
 
 track-thunderhill-t13.jpg:
-	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167965 398712 4 7 $@
+	$(CURDIR)/satellite-stitcher.sh $(SS_OPT) $(SERVER) 167965 398712 4 7 $@
 
 track-thunderhill-t14.jpg:
-	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167967 398696 6 8 $@
+	$(CURDIR)/satellite-stitcher.sh $(SS_OPT) $(SERVER) 167967 398696 6 8 $@
 
 track-thunderhill-t15.jpg:
-	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167970 398697 3 6 $@
+	$(CURDIR)/satellite-stitcher.sh $(SS_OPT) $(SERVER) 167970 398697 3 6 $@
 
 track-brandshatch.jpg:
-	$(CURDIR)/satellite-stitcher.sh $(SERVER) 525031 349359 42 44 $@
+	$(CURDIR)/satellite-stitcher.sh $(SS_OPT) $(SERVER) 525031 349359 42 44 $@
 
 track-sonoma-t01.jpg:
-	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167606 403865 5 2 $@
+	$(CURDIR)/satellite-stitcher.sh $(SS_OPT) $(SERVER) 167606 403865 5 2 $@
 
 track-sonoma-t02.jpg:
-	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167598 403866 6 5 $@
+	$(CURDIR)/satellite-stitcher.sh $(SS_OPT) $(SERVER) 167598 403866 6 5 $@
 
 track-sonoma-t03.jpg:
-	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167589 403862 8 5 $@
+	$(CURDIR)/satellite-stitcher.sh $(SS_OPT) $(SERVER) 167589 403862 8 5 $@
 
 track-sonoma-t04.jpg:
-	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167586 403857 5 6 $@
+	$(CURDIR)/satellite-stitcher.sh $(SS_OPT) $(SERVER) 167586 403857 5 6 $@
 
 track-sonoma-t05.jpg:
-	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167590 403856 8 6 $@
+	$(CURDIR)/satellite-stitcher.sh $(SS_OPT) $(SERVER) 167590 403856 8 6 $@
 
 track-sonoma-t06.jpg:
-	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167597 403858 7 7 $@
+	$(CURDIR)/satellite-stitcher.sh $(SS_OPT) $(SERVER) 167597 403858 7 7 $@
 
 track-sonoma-t07.jpg:
-	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167588 403848 7 7 $@
+	$(CURDIR)/satellite-stitcher.sh $(SS_OPT) $(SERVER) 167588 403848 7 7 $@
 
 track-sonoma-t08.jpg:
-	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167594 403851 11 7 $@
+	$(CURDIR)/satellite-stitcher.sh $(SS_OPT) $(SERVER) 167594 403851 11 7 $@
 
 track-sonoma-t09.jpg:
-	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167608 403860 8 6 $@
+	$(CURDIR)/satellite-stitcher.sh $(SS_OPT) $(SERVER) 167608 403860 8 6 $@
 
 track-sonoma-t10.jpg:
-	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167613 403864 7 7 $@
+	$(CURDIR)/satellite-stitcher.sh $(SS_OPT) $(SERVER) 167613 403864 7 7 $@
 
 track-sonoma-t11.jpg:
-	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167615 403870 6 5 $@
+	$(CURDIR)/satellite-stitcher.sh $(SS_OPT) $(SERVER) 167615 403870 6 5 $@
 
 track-sonoma-kart.jpg:
-	$(CURDIR)/satellite-stitcher.sh $(SERVER) 167615 403885 15 14 $@
+	$(CURDIR)/satellite-stitcher.sh $(SS_OPT) $(SERVER) 167615 403885 15 14 $@
 
 track-buttonwillow-kart.jpg:
-	$(CURDIR)/satellite-stitcher.sh $(SERVER) 176087 413582 12 6 $@
+	$(CURDIR)/satellite-stitcher.sh $(SS_OPT) $(SERVER) 176087 413582 12 6 $@
 
 track-atwater-kart.jpg:
-	$(CURDIR)/satellite-stitcher.sh $(SERVER) 172992 406914 8 10 $@
+	$(CURDIR)/satellite-stitcher.sh $(SS_OPT) $(SERVER) 172992 406914 8 10 $@
 
 track-stockton-kart.jpg:
-	$(CURDIR)/satellite-stitcher.sh $(SERVER) 171063 404680 10 5 $@
+	$(CURDIR)/satellite-stitcher.sh $(SS_OPT) $(SERVER) 171063 404680 10 5 $@
 
 clean: clean-blocks clean-strips clean-images
 

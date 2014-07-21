@@ -17,14 +17,16 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 usage() {
-  echo "Usage: $0 [-n] <server> <xstart> <ystart> <xdelta> <ydelta> <filename>"
+  echo "Usage: $0 [-b] [-n] <server> <xstart> <ystart> <xdelta> <ydelta> <filename>"
 }
 
+border=0
 convert=convert
 curl='curl -f -s'
 
-while getopts 'n' opt; do
+while getopts 'bn' opt; do
   case $opt in
+    b ) border=1 ;;
     n ) convert="echo $convert"; curl="echo $curl" ;;
     ? ) usage; exit 1;;
   esac
@@ -54,6 +56,7 @@ for (( x=$xstart; x<$xend; x++ )); do
   for (( y=$ystart; y<$yend; y++ )); do
     o="blocks/x${x}y${y}.jpg"
     [ ! -f $o ] && ${curl} -o $o "http://${server}/kh/v=153&x=${x}&y=${y}&z=20"
+    [ $border -gt "0" ] && ${convert} $o -border $border $o
     echo -n .
   done
 done
