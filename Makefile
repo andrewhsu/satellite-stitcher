@@ -80,7 +80,7 @@ track-thunderhill-t08.jpg:
 	$(CURDIR)/satellite-stitcher.sh $(SS_OPT) $(SERVER) 167960 398692 13 5 $@
 
 track-thunderhill-t09.jpg:
-	$(CURDIR)/satellite-stitcher.sh $(SS_OPT) $(SERVER) 167956 398699 5 7 $@
+	$(CURDIR)/satellite-stitcher.sh $(SS_OPT) $(SERVER) 167956 398699 5 11 $@
 
 track-thunderhill-t10.jpg:
 	$(CURDIR)/satellite-stitcher.sh $(SS_OPT) $(SERVER) 167959 398715 7 6 $@
