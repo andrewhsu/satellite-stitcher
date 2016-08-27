@@ -6,5 +6,5 @@ satellite-stitcher
 With the right server you too can have a high-resolution jpeg image from the satellites above.
 
 ```
-Usage: satellite-stitcher.sh [-n] server xstart ystart xdelta ydelta filename
+Usage: satellite-stitcher [-n] server xstart ystart xdelta ydelta filename
 ```
